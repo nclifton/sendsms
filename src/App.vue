@@ -4,7 +4,7 @@
         <form @submit.prevent="onSubmit">
             <div>
                 <label for="to">To Phone Number: </label>
-                <input id="to" type="tel" v-model="form.to" required pattern="[+ 0-9]{14}">
+                <input id="to" type="tel" v-model="form.to" required pattern="61[0-9]{9}">
             </div>
             <div>
                 <label for="message"> Message: </label>
@@ -52,7 +52,7 @@
                 axios
                     .post('send.php', this.form)
                     .then(response => this.message = response.data.message)
-                    .catch(error => console.log(error))
+                    .catch(error => {console.log(error);this.message='message failed';})
             }
         }
     }
