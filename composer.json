@@ -1,0 +1,15 @@
+{
+    "name": "neilclifton42/sendsms",
+    "description": "send sms messages using BurstSMS API",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "neilclifton42",
+            "email": "neil.clifton@cliftonwebfoundry.com.au"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "6.3.3"
+    }
+}
