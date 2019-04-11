@@ -1,10 +1,17 @@
 version: '2'
 services:
   webserver:
-    image: phpstorm/php-56-apache-xdebug-25
+    image: webdevops/php-apache-dev:latest
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./:/var/www/html
     environment:
-      XDEBUG_CONFIG: remote_host:172.21.0.1 remote_port=9001
+      WEB_DOCUMENT_ROOT: /var/www/html
+      WEB_DOCUMENT_INDEX: index.php
+      XDEBUG_REMOTE_HOST: 172.17.0.1
+      XDEBUG_REMOTE_PORT: 9001
+
+
+
